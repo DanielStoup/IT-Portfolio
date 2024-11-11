@@ -1,0 +1,108 @@
+/* General.css */
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 20px;
+}
+
+/* Styling for the navigation bar */
+.nav {
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.nav a.active {
+    background-color: #555;
+}
+
+/* Main content section styling */
+.content-section {
+    display: none; /* Set sections to hidden by default */
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-section.active {
+    display: block; /* Only active section will show */
+}
+
+/* Styling for headers */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2, h3 {
+    font-size: 1.5em;
+}
+
+/* Styling for sections */
+section {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Styling for project collapsible areas */
+.project h3 {
+    cursor: pointer;
+    color: #555;
+}
+
+.project-content {
+    margin-top: 10px;
+    padding-left: 15px;
+    display: none;
+}
+
+.project-content p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+/* Contact and footer styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-top: 20px;
+}

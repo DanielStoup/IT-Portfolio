@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Stoup's IT Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Simple styling for navigation tabs */
+        .nav {
+            display: flex;
+            gap: 20px;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .nav a.active {
+            background-color: #333;
+            color: white;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav">
+        <a href="#" onclick="showSection('home')" class="active" id="home-tab">Home</a>
+        <a href="#" onclick="showSection('projects')" id="projects-tab">Projects</a>
+    </nav>
+
+    <!-- Home Section (About and Skills) -->
+    <div id="home" class="content-section active">
+        <!-- Header Section -->
+        <header>
+            <h1>Danie Stoup's Portfolio</h1>
+            <p>Hello I am Daniel, I'm a currently a high school student at Vinal Technical Highschool specializing in the IT Trade.</p>
+        </header>
+
+        <!-- About Me Section -->
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p> I am currently a senior in the IT trade at Vinal Technical High School. I am passionate about building, repairing, and all things hardware.</p>
+            <img src="Images-Portfolio/your-photo.jpg" alt="Your photo">
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <!-- Hardware Skills (Collapsible) -->
+            <h3 onclick="toggleSection('hardware-skills')">Hardware Skills</h3>
+            <ul id="hardware-skills" style="display: none;">
+                <li>Computer Hardware Assembly</li>
+                <li>PC Troubleshooting, Maintenance, and repair</li>
+                <li>Soldering</li>
+            </ul>
+
+            <!-- Software Skills (Collapsible) -->
+            <h3 onclick="toggleSection('software-skills')">Software Skills</h3>
+            <ul id="software-skills" style="display: none;">
+                <li>Operating Systems </li>
+                <li>Basic Networking</li>
+                <li>Software Installation and Configuration</li>
+                <li>System Imaging</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <ul>
+                <li>Email: <a href="mailto:Stoupdaniel@gmail.com">Stoupdaniel@gmail.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></li>
+                <li>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Projects Section (Separate Tab) -->
+    <div id="projects" class="content-section">
+        <h2>Projects</h2>
+
+        <!-- Example Project (Collapsible) -->
+        <div class="project">
+            <h3 onclick="toggleSection('project1')">New MacOS on bootlooped MacBook Air</h3>
+            <div id="project1" class="project-content" style="display: none;">
+                <p>I had a MacBook air that wouldnt post to the operating system and Apple wants you to use a nother MacBook to recover or install a new OS onto it. I was able to use a windows computer to put a new MacOS onto the MacBook Air.</p>
+                <img src="Images-Portfolio/project1.jpg" alt="Screenshot of Project 1">
+            </div>
+        </div>
+
+        <!-- Another Example Project (Collapsible) -->
+        <div class="project">
+            <h3 onclick="toggleSection('project2')">Soldered a Speaker from a kit</h3>
+            <div id="project2" class="project-content" style="display: none;">
+                <p>I had bought a soldering kit from Amazon that came with the parts needed to make the speaker and I soldered all the parts to the board to make a working speaker.</p>
+                <img src="Images-Portfolio/project2.jpg" alt="Screenshot of Project 2">
+            </div>
+        </div>
+
+        <div class="project">
+            <h3 onclick="toggleSection('project3')">Project Title 3</h3>
+            <div id="project3" class="project-content" style="display: none;">
+                <p>Brief description of the project, what you did, and what you learned.</p>
+                <img src="Images-Portfolio/project3.jpg" alt="Screenshot of Project 3">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p> 2024 Daniel Stoup</p>
+    </footer>
+
+    <!-- Link JavaScript File -->
+    <script src="portfolio.js"></script>
+
+    <!-- Links CSS File -->
+    <link rel="stylesheet" href="general.css">
+
+    
+</body>
+</html>
